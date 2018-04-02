@@ -1,0 +1,14 @@
+module.exports.config = {
+    listenPort: 8888,
+    dataDir: '/tmp/jobs',
+    s3: {
+      region: 'us-east-1',
+      accessKeyId: 'AAAAAAAAAAAAAAAA',
+      secretAccessKey: 'xxxxxxxxxxxxxxxxxx',
+      bucket: 'bucketname',
+      prefex: 'cliwa'
+    },
+    allowedCommands: [
+        '/path/to/example.sh'
+    ]
+};

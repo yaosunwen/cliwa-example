@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous"/>
+  <link href="/cliwa/stylesheets/cliwa.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form id="cmd" action="/cliwa/exec" method="post">
+          <input type="hidden" name="command" value="/Users/sunweyao/shared/cliwa-example/example.sh"/>
+          <input type="hidden" name="arguments" value="-l"/>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">path:</span>
+              </div>
+              <input class="form-control" type="text" name="arguments" value="/"/>
+            </div>
+          </div>
+        <input class="btn btn-primary" type="submit" value="OK" />
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col" id="stdout"></div>
+    </div>
+    <div class="row">
+      <div class="col" id="stderr"></div>
+    </div>
+    <div class="row">
+      <div class="col" id="result"></div>
+    </div>
+  </div>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <script src="/cliwa/javascripts/url.js"></script>
+  <script src="/cliwa/javascripts/poller.js"></script>
+  <script src="/cliwa/javascripts/updater.js"></script>
+  <script src="/cliwa/javascripts/init.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    cliwa.init({
+      baseUrl: '/cliwa'
+    });
+  });
+  </script>
+</body>
+
+</html>
